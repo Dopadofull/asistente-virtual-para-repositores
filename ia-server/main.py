@@ -26,9 +26,9 @@ async def upload_image(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(content={"message": f"Error al recibir la imagen: {str(e)}"}, status_code=500)
 
-    # Ruta principal
-    @app.get("/")
-    def read_root():
-        return{"Hola":"Mundo"}
+# Ruta principal
+@app.get("/")
+def read_root():
+ return{"Hola":"Mundo"}
     
     
