@@ -1,15 +1,18 @@
 #from locutor import Locutor
 #from servidor import Servidor
 from src.camara import Camara
-
-
+from src.servidor import Servidor
+from src.locutor import Locutor
+import pyttsx3
 
 def main():
-    # Crear una instancia de la clase Camara
+    engine = pyttsx3.init()
     camara = Camara()
-    
-    # Llamamos al método sacar_fotos() para simular la toma de una foto
     foto = camara.sacar_fotos()
-    
-    # Aquí podrías hacer algo con la foto, como mostrarla o procesarla.
     print(f"Foto guardada en: {foto}")
+    servidor = Servidor()
+    respuesta = servidor.reconocer_objeto(foto)
+    locutor = Locutor()
+    vos = locutor.enunciar_objeto(respuesta)
+    engine.say(vos)
+    engine.runAndWait()
