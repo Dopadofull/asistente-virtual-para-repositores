@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5de2b13385aebd6082187a1a0621dad539b8473ca43f6769eac17a2def57e999"
+            "sha256": "5883327e9a20d751e02dff4cff391c51eab948a8e4eed6a47e56518e178c49f9"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.11"
+            "python_version": "3"
         },
         "sources": [
             {
@@ -16,12 +16,13 @@
         ]
     },
     "default": {
-        "picamera": {
+        "pyttsx3": {
             "hashes": [
-                "sha256:890815aa01e4d855a6a95dd3ad0953b872a6b954982106407df0c5a31a163e50"
+                "sha256:b3fb4ca4d5ae4f8e6836d6b37bf5fee0fd51d157ffa27fb9064be6e7be3da37a",
+                "sha256:cc609466151d8c4a69c1c765a945f893c00c1fd2569c2db55e17dc22121e9162"
             ],
             "index": "pypi",
-            "version": "==1.13"
+            "version": "==2.98"
         }
     },
     "develop": {}
