@@ -8,7 +8,10 @@ class Locutor:
         print("estoy hablando")
         engine = pyttsx3.init()
         engine.setProperty("rate", 20)
-        engine.say("manzana pera tomate")
+        volume = engine.getProperty("volume")
+        print(volume)
+        engine.setProperty("volume", 1.0)
+        engine.say("Lime milk Pomelo")
         engine.runAndWait()
 
         return objeto
