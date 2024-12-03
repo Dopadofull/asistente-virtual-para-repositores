@@ -11,7 +11,7 @@ class Locutor:
         volume = engine.getProperty("volume")
         print(volume)
         engine.setProperty("volume", 1.0)
-        engine.say("Lime milk Pomelo")
+        engine.say("tiago")
         engine.runAndWait()
 
         return objeto

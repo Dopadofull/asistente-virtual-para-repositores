@@ -1,7 +1,7 @@
 # from locutor import Locutor
 # from servidor import Servidor
 from src.camara import Camara
-from src.servidor import Servidor
+from src.servidor import IA
 from src.locutor import Locutor
 
 
@@ -9,7 +9,7 @@ def main():
     camara = Camara()
     foto = camara.sacar_fotos()
     print(f"Foto guardada en: {foto}")
-    servidor = Servidor()
+    servidor = IA()
     respuesta = servidor.reconocer_objeto(foto)
     locutor = Locutor()
     locutor.enunciar_objeto(respuesta)
