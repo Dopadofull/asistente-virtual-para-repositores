@@ -14,6 +14,6 @@ gitpython = "*"
 python_version = "3"
 
 [scripts]
-server = 'fastapi dev ./main.py'
+server = 'fastapi dev ./main.py --host 10.9.121.65 --port 8000'
 client = 'python ./upload_image.py'
 descargar_ia = "python ./Utils/descargar_IA.py"
