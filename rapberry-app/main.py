@@ -8,7 +8,6 @@ from src.locutor import Locutor
 def main():
     camara = Camara()
     foto = camara.sacar_fotos()
-    print(f"Foto guardada en: {foto}")
     servidor = IA()
     respuesta = servidor.reconocer_objeto(foto)
     locutor = Locutor()
