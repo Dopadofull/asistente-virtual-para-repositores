@@ -27,5 +27,5 @@ class Camara:
         else:
                 print("Error al acceder a la cámara")
                 sleep(1.5)
-                
-        return ahoraStr
+
+        return rutAlaUltimaFotoTomada
