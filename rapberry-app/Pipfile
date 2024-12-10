@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 requests = "*"
 pyttsx3 = "*"
+opencv-python = "*"
 
 [dev-packages]
 
