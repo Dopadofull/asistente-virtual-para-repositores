@@ -1,7 +1,7 @@
 import requests
 
 # Define la URL de tu API
-url = "http://10.9.120.225:8000/upload/"
+url = "http://10.9.121.207:8000/upload_and_detect/"
 
 # Abre el archivo de imagen en modo binario
 file_path = "manzana_roja.jpg"  # Cambia esto a la ruta de tu archivo de imagen
