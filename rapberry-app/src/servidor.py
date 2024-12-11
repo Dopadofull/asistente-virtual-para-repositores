@@ -4,9 +4,9 @@ import requests
 
 @dataclass
 class IA:  
-    servidor_url = "http://10.9.120.225:8000/upload"
+    servidor_url = "http://10.9.121.207:8000/upload_and_detect/"
 
-    def reconocer_objeto(self, foto: pl):
+    def reconocer_objetos(self, foto: pl)->str:
         # Ruta de la imagen que deseas enviar
         #image_path = "./data_fake/naranja.jpg"
 
@@ -16,8 +16,9 @@ class IA:
         with open(foto, 'rb') as img:
             files = {'file': img}
             respuesta = requests.post(self.servidor_url, files=files)
-            print(respuesta.json())
+            print("esta es la respuesta del servidor",respuesta.json())
 
+            objetos = list(map(lambda x: x["class"], respuesta.json()["detections"]))
+            print(f"objetos detectados: {objetos}")
 
-
-            return respuesta
+            return objetos
