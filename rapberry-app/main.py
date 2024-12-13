@@ -3,6 +3,7 @@
 from src.camara import Camara
 from src.servidor import IA
 from src.locutor import Locutor
+from src.traductor import Traductor
 import time
 
 def main():
@@ -12,8 +13,10 @@ def main():
         foto = camara.sacar_fotos()
         servidor = IA()
         respuesta = servidor.reconocer_objetos(foto)
+        traductor = Traductor()
+        textoTR = traductor.traducir_lista(respuesta)
         locutor = Locutor()
-        locutor.enunciar_objetos(respuesta)
+        locutor.enunciar_objetos(textoTR)
 
         time.sleep(3)
 

@@ -4,7 +4,7 @@ import requests
 
 @dataclass
 class IA:  
-    servidor_url = "http://10.9.121.207:8000/upload_and_detect/"
+    servidor_url = "http://10.9.120.188:8000/upload_and_detect/"
 
     def reconocer_objetos(self, foto: pl)->str:
         # Ruta de la imagen que deseas enviar
